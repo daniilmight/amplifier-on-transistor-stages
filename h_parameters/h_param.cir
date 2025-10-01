@@ -1,0 +1,24 @@
+* D:\orcad_projects\23.09.2024 (1)\23.09.2024 (1).sch
+
+* Schematics Version 9.2
+* Mon Nov 18 09:37:38 2024
+
+
+
+** Analysis setup **
+.DC LIN V_V4 0 18 18m 
++ LIN I_I1 20u 40u 20u 
+.TEMP 23 25 27
+.OP 
+
+
+* From [PSPICE NETLIST] section of C:\Program Files\Orcad\PSpice\PSpice.ini:
+.lib "nom.lib"
+
+.INC "23.09.2024 (1).net"
+
+
+.PROBE V(*) I(*) W(*) D(*) NOISE(*) 
+
+
+.END

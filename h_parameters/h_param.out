@@ -1,0 +1,425 @@
+
+**** 11/18/24 09:37:38 ********* PSpice 9.2 (Mar 2000) ******** ID# 1 ********
+
+ * D:\orcad_projects\23.09.2024 (1)\23.09.2024 (1).sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.2
+* Mon Nov 18 09:37:38 2024
+
+
+
+** Analysis setup **
+.DC LIN V_V4 0 18 18m 
++ LIN I_I1 20u 40u 20u 
+.TEMP 23 25 27
+.OP 
+
+
+* From [PSPICE NETLIST] section of C:\Program Files\Orcad\PSpice\PSpice.ini:
+.lib "nom.lib"
+
+.INC "23.09.2024 (1).net"
+
+
+
+**** INCLUDING "23.09.2024 (1).net" ****
+* Schematics Netlist *
+
+
+
+V_V1         $N_0001 0 0V
+V_V2         $N_0002 0 18V
+Q_Q1         $N_0002 $N_0001 0 BC548A 
+V_V4         $N_0003 0 18V
+I_I1         0 $N_0004 DC 20uA  
+Q_Q2         $N_0003 $N_0004 0 BC548A 
+
+**** RESUMING "23.09.2024 (1).cir" ****
+.PROBE V(*) I(*) W(*) D(*) NOISE(*) 
+
+
+.END
+
+**** 11/18/24 09:37:38 ********* PSpice 9.2 (Mar 2000) ******** ID# 1 ********
+
+ * D:\orcad_projects\23.09.2024 (1)\23.09.2024 (1).sch
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               BC548A          
+               NPN             
+          IS    7.049000E-15 
+          BF  253            
+          NF    1            
+         VAF  127.9          
+         IKF     .07705      
+         ISE   96.260000E-15 
+          NE    1.556        
+          BR    1            
+          NR    1            
+         IKR    3.321        
+         ISC  130.800000E-15 
+          NC    1.602        
+          NK     .5305       
+          RC     .8766       
+         CJE   11.500000E-12 
+         VJE     .5          
+         MJE     .6715       
+         CJC    5.250000E-12 
+         VJC     .5697       
+         MJC     .3147       
+          TF  409.500000E-12 
+         XTF   40.12         
+         VTF   10            
+         ITF    1.994        
+          TR   10.000000E-09 
+         XTB    1.5          
+          CN    2.42         
+           D     .87         
+
+
+**** 11/18/24 09:37:38 ********* PSpice 9.2 (Mar 2000) ******** ID# 1 ********
+
+ * D:\orcad_projects\23.09.2024 (1)\23.09.2024 (1).sch
+
+
+ ****     TEMPERATURE-ADJUSTED VALUES      TEMPERATURE =   23.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+ **** BJT MODEL PARAMETERS
+
+                   BC548A     
+
+         BF        2.480E+02  
+        ISE        6.594E-14  
+        VJE        5.103E-01  
+        CJE        1.133E-11  
+         RE        0.000E+00  
+         RB        0.000E+00  
+         BR        9.801E-01  
+        ISC        9.063E-14  
+        VJC        5.791E-01  
+        CJC        5.220E-12  
+         RC        8.766E-01  
+        RBM        0.000E+00  
+         IS        3.792E-15  
+        ISS        0.000E+00  
+        VJS        7.570E-01  
+        CJS        0.000E+00  
+      GAMMA        1.000E-11  
+        RCO        0.000E+00  
+         VO        1.000E+01  
+
+
+**** 11/18/24 09:37:38 ********* PSpice 9.2 (Mar 2000) ******** ID# 1 ********
+
+ * D:\orcad_projects\23.09.2024 (1)\23.09.2024 (1).sch
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   23.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+($N_0001)    0.0000                   ($N_0002)   18.0000                       
+
+($N_0003)   18.0000                   ($N_0004)     .7070                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         1.846E-11
+    V_V2        -3.900E-11
+    V_V4        -4.392E-03
+
+    TOTAL POWER DISSIPATION   7.91E-02  WATTS
+
+
+**** 11/18/24 09:37:38 ********* PSpice 9.2 (Mar 2000) ******** ID# 1 ********
+
+ * D:\orcad_projects\23.09.2024 (1)\23.09.2024 (1).sch
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   23.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+
+**** BIPOLAR JUNCTION TRANSISTORS
+
+
+NAME         Q_Q1        Q_Q2      
+MODEL        BC548A      BC548A    
+IB          -1.85E-11    2.00E-05 
+IC           3.90E-11    4.39E-03 
+VBE          0.00E+00    7.07E-01 
+VBC         -1.80E+01   -1.73E+01 
+VCE          1.80E+01    1.80E+01 
+BETADC      -2.11E+00    2.20E+02 
+GM           2.88E-14    1.64E-01 
+RPI          6.00E+11    1.36E+03 
+RX           0.00E+00    0.00E+00 
+RO           7.80E+11    3.31E+04 
+CBE          1.13E-11    1.07E-10 
+CBC          1.75E-12    1.77E-12 
+CJS          0.00E+00    0.00E+00 
+BETAAC       1.73E-02    2.23E+02 
+CBX/CBX2     0.00E+00    0.00E+00 
+FT/FT2       3.50E-04    2.41E+08 
+
+
+**** 11/18/24 09:37:38 ********* PSpice 9.2 (Mar 2000) ******** ID# 1 ********
+
+ * D:\orcad_projects\23.09.2024 (1)\23.09.2024 (1).sch
+
+
+ ****     TEMPERATURE-ADJUSTED VALUES      TEMPERATURE =   25.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+ **** BJT MODEL PARAMETERS
+
+                   BC548A     
+
+         BF        2.505E+02  
+        ISE        7.977E-14  
+        VJE        5.051E-01  
+        CJE        1.141E-11  
+         RE        0.000E+00  
+         RB        0.000E+00  
+         BR        9.900E-01  
+        ISC        1.090E-13  
+        VJC        5.744E-01  
+        CJC        5.235E-12  
+         RC        8.766E-01  
+        RBM        0.000E+00  
+         IS        5.181E-15  
+        ISS        0.000E+00  
+        VJS        7.535E-01  
+        CJS        0.000E+00  
+      GAMMA        1.000E-11  
+        RCO        0.000E+00  
+         VO        1.000E+01  
+
+
+**** 11/18/24 09:37:38 ********* PSpice 9.2 (Mar 2000) ******** ID# 1 ********
+
+ * D:\orcad_projects\23.09.2024 (1)\23.09.2024 (1).sch
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   25.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+($N_0001)    0.0000                   ($N_0002)   18.0000                       
+
+($N_0003)   18.0000                   ($N_0004)     .7040                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         1.830E-11
+    V_V2        -3.883E-11
+    V_V4        -4.438E-03
+
+    TOTAL POWER DISSIPATION   7.99E-02  WATTS
+
+
+**** 11/18/24 09:37:38 ********* PSpice 9.2 (Mar 2000) ******** ID# 1 ********
+
+ * D:\orcad_projects\23.09.2024 (1)\23.09.2024 (1).sch
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   25.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+
+**** BIPOLAR JUNCTION TRANSISTORS
+
+
+NAME         Q_Q1        Q_Q2      
+MODEL        BC548A      BC548A    
+IB          -1.83E-11    2.00E-05 
+IC           3.88E-11    4.44E-03 
+VBE          0.00E+00    7.04E-01 
+VBC         -1.80E+01   -1.73E+01 
+VCE          1.80E+01    1.80E+01 
+BETADC      -2.12E+00    2.22E+02 
+GM           8.93E-14    1.64E-01 
+RPI          5.00E+11    1.37E+03 
+RX           0.00E+00    0.00E+00 
+RO           7.80E+11    3.27E+04 
+CBE          1.14E-11    1.07E-10 
+CBC          1.75E-12    1.77E-12 
+CJS          0.00E+00    0.00E+00 
+BETAAC       4.46E-02    2.25E+02 
+CBX/CBX2     0.00E+00    0.00E+00 
+FT/FT2       1.08E-03    2.40E+08 
+
+
+**** 11/18/24 09:37:38 ********* PSpice 9.2 (Mar 2000) ******** ID# 1 ********
+
+ * D:\orcad_projects\23.09.2024 (1)\23.09.2024 (1).sch
+
+
+ ****     TEMPERATURE-ADJUSTED VALUES      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+ **** BJT MODEL PARAMETERS
+
+                   BC548A     
+
+         BF        2.530E+02  
+        ISE        9.626E-14  
+        VJE        5.000E-01  
+        CJE        1.150E-11  
+         RE        0.000E+00  
+         RB        0.000E+00  
+         BR        1.000E+00  
+        ISC        1.308E-13  
+        VJC        5.697E-01  
+        CJC        5.250E-12  
+         RC        8.766E-01  
+        RBM        0.000E+00  
+         IS        7.049E-15  
+        ISS        0.000E+00  
+        VJS        7.500E-01  
+        CJS        0.000E+00  
+      GAMMA        1.000E-11  
+        RCO        0.000E+00  
+         VO        1.000E+01  
+
+
+**** 11/18/24 09:37:38 ********* PSpice 9.2 (Mar 2000) ******** ID# 1 ********
+
+ * D:\orcad_projects\23.09.2024 (1)\23.09.2024 (1).sch
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+($N_0001)    0.0000                   ($N_0002)   18.0000                       
+
+($N_0003)   18.0000                   ($N_0004)     .7010                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         1.814E-11
+    V_V2        -3.868E-11
+    V_V4        -4.483E-03
+
+    TOTAL POWER DISSIPATION   8.07E-02  WATTS
+
+
+**** 11/18/24 09:37:38 ********* PSpice 9.2 (Mar 2000) ******** ID# 1 ********
+
+ * D:\orcad_projects\23.09.2024 (1)\23.09.2024 (1).sch
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+
+**** BIPOLAR JUNCTION TRANSISTORS
+
+
+NAME         Q_Q1        Q_Q2      
+MODEL        BC548A      BC548A    
+IB          -1.81E-11    2.00E-05 
+IC           3.87E-11    4.48E-03 
+VBE          0.00E+00    7.01E-01 
+VBC         -1.80E+01   -1.73E+01 
+VCE          1.80E+01    1.80E+01 
+BETADC      -2.13E+00    2.24E+02 
+GM           1.70E-13    1.65E-01 
+RPI          4.17E+11    1.38E+03 
+RX           0.00E+00    0.00E+00 
+RO           7.80E+11    3.24E+04 
+CBE          1.15E-11    1.08E-10 
+CBC          1.75E-12    1.78E-12 
+CJS          0.00E+00    0.00E+00 
+BETAAC       7.10E-02    2.27E+02 
+CBX/CBX2     0.00E+00    0.00E+00 
+FT/FT2       2.04E-03    2.39E+08 
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .67
+
